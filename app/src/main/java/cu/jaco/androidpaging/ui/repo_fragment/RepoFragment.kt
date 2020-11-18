@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.ui.repo_fragment
+package cu.jaco.androidpaging.ui.repo_fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,8 +13,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.RecyclerView
-import com.montbrungroup.androidpaguin.R
-import com.montbrungroup.androidpaguin.ui.base.BaseFragment
+import cu.jaco.androidpaging.R
+import cu.jaco.androidpaging.ui.base.BaseFragment
+import cu.jaco.androidpaging.ui.repo_fragment.RepoPageAdapter
+import cu.jaco.androidpaging.ui.repo_fragment.RepoViewModel
+import cu.jaco.androidpaging.ui.repo_fragment.ReposLoadStateAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

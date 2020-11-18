@@ -1,10 +1,10 @@
-package com.montbrungroup.androidpaguin.di.modules
+package cu.jaco.androidpaging.di.modules
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.montbrungroup.androidpaguin.di.annotations.ViewModelKey
-import com.montbrungroup.androidpaguin.ui.repo_fragment.RepoViewModel
-import com.montbrungroup.androidpaguin.viewmodels.ViewModelFactory
+import cu.jaco.androidpaging.di.annotations.ViewModelKey
+import cu.jaco.androidpaging.ui.repo_fragment.RepoViewModel
+import cu.jaco.androidpaging.viewmodels.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

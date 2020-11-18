@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.di.annotations
+package cu.jaco.androidpaging.di.annotations
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

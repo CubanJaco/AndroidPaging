@@ -1,7 +1,7 @@
-package com.montbrungroup.androidpaguin.di.modules
+package cu.jaco.androidpaging.di.modules
 
 import android.content.Context
-import com.montbrungroup.androidpaguin.Application
+import cu.jaco.androidpaging.Application
 import dagger.Module
 import dagger.Provides
 

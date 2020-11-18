@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.viewmodels
+package cu.jaco.androidpaging.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

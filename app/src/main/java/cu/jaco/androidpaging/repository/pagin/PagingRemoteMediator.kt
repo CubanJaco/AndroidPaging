@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.montbrungroup.androidpaguin.repository.pagin
+package cu.jaco.androidpaging.repository.pagin
 
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
-import com.montbrungroup.androidpaguin.Consts
-import com.montbrungroup.androidpaguin.Preferences
-import com.montbrungroup.androidpaguin.database.RepoDatabase
-import com.montbrungroup.androidpaguin.model.Repo
-import com.montbrungroup.androidpaguin.repository.RetrofitApiService
-import com.montbrungroup.androidpaguin.repository.safeapicall.ResultWrapper
+import cu.jaco.androidpaging.Consts
+import cu.jaco.androidpaging.Preferences
+import cu.jaco.androidpaging.database.RepoDatabase
+import cu.jaco.androidpaging.model.Repo
+import cu.jaco.androidpaging.repository.RetrofitApiService
+import cu.jaco.androidpaging.repository.safeapicall.ResultWrapper
 import javax.inject.Inject
 
 /**

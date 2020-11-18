@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.viewmodels
+package cu.jaco.androidpaging.viewmodels
 
 import android.util.Log
 import androidx.annotation.MainThread

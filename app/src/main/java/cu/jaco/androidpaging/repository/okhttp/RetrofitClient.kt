@@ -1,10 +1,10 @@
-package com.montbrungroup.androidpaguin.repository.okhttp
+package cu.jaco.androidpaging.repository.okhttp
 
 import android.content.Context
 import com.google.gson.GsonBuilder
-import com.montbrungroup.androidpaguin.Application
-import com.montbrungroup.androidpaguin.BuildConfig
-import com.montbrungroup.androidpaguin.repository.RetrofitApi
+import cu.jaco.androidpaging.Application
+import cu.jaco.androidpaging.BuildConfig
+import cu.jaco.androidpaging.repository.RetrofitApi
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

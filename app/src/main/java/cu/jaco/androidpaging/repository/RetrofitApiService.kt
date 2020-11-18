@@ -1,9 +1,10 @@
-package com.montbrungroup.androidpaguin.repository
+package cu.jaco.androidpaging.repository
 
-import com.montbrungroup.androidpaguin.Consts
-import com.montbrungroup.androidpaguin.model.RepoResponse
-import com.montbrungroup.androidpaguin.repository.safeapicall.ResultWrapper
-import com.montbrungroup.androidpaguin.repository.safeapicall.SafeApiCall
+import cu.jaco.androidpaging.Consts
+import cu.jaco.androidpaging.model.RepoResponse
+import cu.jaco.androidpaging.repository.RetrofitApi
+import cu.jaco.androidpaging.repository.safeapicall.ResultWrapper
+import cu.jaco.androidpaging.repository.safeapicall.SafeApiCall
 import javax.inject.Inject
 
 class RetrofitApiService @Inject constructor(

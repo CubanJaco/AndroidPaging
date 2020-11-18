@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-package com.montbrungroup.androidpaguin.database
+package cu.jaco.androidpaging.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.montbrungroup.androidpaguin.model.Repo
+import cu.jaco.androidpaging.model.Repo
+import cu.jaco.androidpaging.database.RepoDao
 
 @Database(
     entities = [Repo::class],

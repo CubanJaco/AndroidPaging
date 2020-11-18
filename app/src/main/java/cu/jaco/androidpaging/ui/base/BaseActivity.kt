@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.ui.base
+package cu.jaco.androidpaging.ui.base
 
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerAppCompatActivity

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.montbrungroup.androidpaguin.database
+package cu.jaco.androidpaging.database
 
 import androidx.paging.PagingSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.montbrungroup.androidpaguin.model.Repo
+import cu.jaco.androidpaging.model.Repo
 
 @Dao
 interface RepoDao {

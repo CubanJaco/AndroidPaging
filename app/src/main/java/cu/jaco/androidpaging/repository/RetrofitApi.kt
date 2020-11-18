@@ -1,6 +1,6 @@
-package com.montbrungroup.androidpaguin.repository
+package cu.jaco.androidpaging.repository
 
-import com.montbrungroup.androidpaguin.model.RepoResponse
+import cu.jaco.androidpaging.model.RepoResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

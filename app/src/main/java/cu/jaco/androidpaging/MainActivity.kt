@@ -1,7 +1,7 @@
-package com.montbrungroup.androidpaguin
+package cu.jaco.androidpaging
 
 import android.os.Bundle
-import com.montbrungroup.androidpaguin.ui.base.BaseActivity
+import cu.jaco.androidpaging.ui.base.BaseActivity
 
 class MainActivity : BaseActivity() {
 

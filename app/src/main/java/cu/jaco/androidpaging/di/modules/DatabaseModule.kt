@@ -1,8 +1,8 @@
-package com.montbrungroup.androidpaguin.di.modules
+package cu.jaco.androidpaging.di.modules
 
-import com.montbrungroup.androidpaguin.Application
-import com.montbrungroup.androidpaguin.database.RepoDatabase
-import com.montbrungroup.androidpaguin.repository.okhttp.RetrofitClient
+import cu.jaco.androidpaging.Application
+import cu.jaco.androidpaging.database.RepoDatabase
+import cu.jaco.androidpaging.repository.okhttp.RetrofitClient
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

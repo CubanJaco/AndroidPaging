@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin
+package cu.jaco.androidpaging
 
 import android.app.Activity
 import android.app.Application

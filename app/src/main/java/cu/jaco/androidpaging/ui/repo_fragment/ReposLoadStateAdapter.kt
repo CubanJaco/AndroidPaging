@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.montbrungroup.androidpaguin.ui.repo_fragment
+package cu.jaco.androidpaging.ui.repo_fragment
 
 import android.view.LayoutInflater
 import android.view.View
@@ -26,7 +26,7 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.montbrungroup.androidpaguin.R
+import cu.jaco.androidpaging.R
 
 class ReposLoadStateAdapter(
     private val retry: () -> Unit

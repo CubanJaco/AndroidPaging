@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.ui.repo_fragment
+package cu.jaco.androidpaging.ui.repo_fragment
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.montbrungroup.androidpaguin.R
-import com.montbrungroup.androidpaguin.model.Repo
+import cu.jaco.androidpaging.R
+import cu.jaco.androidpaging.model.Repo
 
 class RepoPageAdapter : PagingDataAdapter<Repo, RepoPageAdapter.RepoViewHolder>(
     RepoDiffUtils()

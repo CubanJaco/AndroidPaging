@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.montbrungroup.androidpaguin.model
+package cu.jaco.androidpaging.model
 
 import com.google.gson.annotations.SerializedName
 

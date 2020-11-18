@@ -1,6 +1,6 @@
-package com.montbrungroup.androidpaguin.di.modules
+package cu.jaco.androidpaging.di.modules
 
-import com.montbrungroup.androidpaguin.ui.repo_fragment.RepoFragment
+import cu.jaco.androidpaging.ui.repo_fragment.RepoFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

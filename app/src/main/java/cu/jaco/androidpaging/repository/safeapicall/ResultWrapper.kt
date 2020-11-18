@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.repository.safeapicall
+package cu.jaco.androidpaging.repository.safeapicall
 
 sealed class ResultWrapper<T, E> {
     data class Success<T>(val value: T): ResultWrapper<T, Nothing>()

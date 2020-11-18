@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.montbrungroup.androidpaguin.model
+package cu.jaco.androidpaging.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import com.montbrungroup.androidpaguin.Consts
+import cu.jaco.androidpaging.Consts
 
 /**
  * Immutable model class for a Github repo that holds all the information about a repository.

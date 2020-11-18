@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.repository.safeapicall
+package cu.jaco.androidpaging.repository.safeapicall
 
 import com.google.gson.Gson
 import com.google.gson.stream.MalformedJsonException

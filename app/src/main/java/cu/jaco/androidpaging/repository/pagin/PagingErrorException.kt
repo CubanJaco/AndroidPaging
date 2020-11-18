@@ -1,5 +1,5 @@
-package com.montbrungroup.androidpaguin.repository.pagin
+package cu.jaco.androidpaging.repository.pagin
 
-import com.montbrungroup.androidpaguin.repository.safeapicall.ResultWrapper
+import cu.jaco.androidpaging.repository.safeapicall.ResultWrapper
 
 class PagingErrorException(val result: ResultWrapper<Any, Any>): Exception()

@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin.ui.base
+package cu.jaco.androidpaging.ui.base
 
 import android.content.Context
 import androidx.fragment.app.Fragment

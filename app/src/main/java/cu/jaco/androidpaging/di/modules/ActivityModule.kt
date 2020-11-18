@@ -1,6 +1,6 @@
-package com.montbrungroup.androidpaguin.di.modules
+package cu.jaco.androidpaging.di.modules
 
-import com.montbrungroup.androidpaguin.MainActivity
+import cu.jaco.androidpaging.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.montbrungroup.androidpaguin.ui.repo_fragment.RepoFragment"
+        android:name="cu.jaco.androidpaging.ui.repo_fragment.RepoFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 

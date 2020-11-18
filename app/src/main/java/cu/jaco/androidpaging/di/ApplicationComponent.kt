@@ -1,10 +1,10 @@
 package com.montbrungroup.yumitup.di
 
-import com.montbrungroup.androidpaguin.Application
-import com.montbrungroup.androidpaguin.di.modules.ActivityModule
-import com.montbrungroup.androidpaguin.di.modules.ApplicationModule
-import com.montbrungroup.androidpaguin.di.modules.DatabaseModule
-import com.montbrungroup.androidpaguin.di.modules.ResModule
+import cu.jaco.androidpaging.Application
+import cu.jaco.androidpaging.di.modules.ActivityModule
+import cu.jaco.androidpaging.di.modules.ApplicationModule
+import cu.jaco.androidpaging.di.modules.DatabaseModule
+import cu.jaco.androidpaging.di.modules.ResModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

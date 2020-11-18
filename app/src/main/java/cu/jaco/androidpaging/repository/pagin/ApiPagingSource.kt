@@ -1,12 +1,12 @@
-package com.montbrungroup.androidpaguin.repository.pagin
+package cu.jaco.androidpaging.repository.pagin
 
 import android.util.Log
 import androidx.paging.PagingSource
-import com.montbrungroup.androidpaguin.Consts
-import com.montbrungroup.androidpaguin.database.RepoDatabase
-import com.montbrungroup.androidpaguin.model.Repo
-import com.montbrungroup.androidpaguin.repository.RetrofitApiService
-import com.montbrungroup.androidpaguin.repository.safeapicall.ResultWrapper
+import cu.jaco.androidpaging.Consts
+import cu.jaco.androidpaging.database.RepoDatabase
+import cu.jaco.androidpaging.model.Repo
+import cu.jaco.androidpaging.repository.RetrofitApiService
+import cu.jaco.androidpaging.repository.safeapicall.ResultWrapper
 import javax.inject.Inject
 
 class ApiPagingSource @Inject constructor(

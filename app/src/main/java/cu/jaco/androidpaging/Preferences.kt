@@ -1,4 +1,4 @@
-package com.montbrungroup.androidpaguin
+package cu.jaco.androidpaging
 
 import android.content.Context
 import android.content.SharedPreferences
