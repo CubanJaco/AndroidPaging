@@ -16,16 +16,17 @@
 
 package cu.jaco.androidpaging.repository.pagin
 
+import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import cu.jaco.androidpaging.Consts
-import cu.jaco.androidpaging.Preferences
 import cu.jaco.androidpaging.database.RepoDatabase
 import cu.jaco.androidpaging.model.Repo
 import cu.jaco.androidpaging.repository.RetrofitApiService
 import cu.jaco.androidpaging.repository.safeapicall.ResultWrapper
+import java.lang.IllegalStateException
 import javax.inject.Inject
 
 /**
@@ -34,43 +35,45 @@ import javax.inject.Inject
 @OptIn(ExperimentalPagingApi::class)
 class PagingRemoteMediator @Inject constructor(
     private val service: RetrofitApiService,
-    private val repoDatabase: RepoDatabase,
-    private val preferences: Preferences
+    private val repoDatabase: RepoDatabase
 ) : RemoteMediator<Int, Repo>() {
+
+    companion object {
+        private const val TAG = "PagingRemoteMediator"
+    }
 
     override suspend fun load(loadType: LoadType, state: PagingState<Int, Repo>): MediatorResult {
 
         val page = when (loadType) {
             LoadType.REFRESH -> {
-                state.anchorPosition ?: Consts.FIRST_PAGE
+                Consts.FIRST_PAGE
             }
             LoadType.PREPEND -> {
-                if (preferences.firstPage == Consts.NO_PAGE) {
-                    preferences.firstPage = Consts.FIRST_PAGE
-                    Consts.FIRST_PAGE
-                } else {
-                    --preferences.firstPage
-                }
+                return MediatorResult.Success(endOfPaginationReached = true)
             }
             LoadType.APPEND -> {
-                if (preferences.lastPage == Consts.NO_PAGE) {
-                    preferences.lastPage = Consts.FIRST_PAGE
-                    Consts.FIRST_PAGE
-                } else {
-                    ++preferences.lastPage
-                }
+                state.pages.find { it.data.isNotEmpty() }?.data?.lastOrNull()?.page?.plus(1)
+                    ?: Consts.FIRST_PAGE
             }
 
         }
 
+        Log.d(TAG, "Page: $page")
+
         return when (val response = service.getRepoPage(page)) {
             is ResultWrapper.Success -> {
+                Log.d(TAG, "Inserting in database")
+
                 val dao = repoDatabase.reposDao()
 
-                if (loadType == LoadType.REFRESH)
-                    dao.clearRepos()
+//                if (loadType == LoadType.REFRESH) {
+//                    Log.d(TAG, "Clearing database")
+//                    dao.clearRepos()
+//                    Log.d(TAG, "Database cleared")
+//                }
 
                 dao.insertAll(response.value.items.map { it.apply { it.page = page } })
+                Log.d(TAG, "Inserted in database")
 
                 MediatorResult.Success(endOfPaginationReached = response.value.items.isEmpty())
             }

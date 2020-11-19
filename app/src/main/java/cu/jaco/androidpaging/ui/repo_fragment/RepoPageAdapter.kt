@@ -48,7 +48,7 @@ class RepoPageAdapter : PagingDataAdapter<Repo, RepoPageAdapter.RepoViewHolder>(
 
         private fun showRepoData(repo: Repo) {
             this.repo = repo
-            name.text = repo.fullName
+            name.text = "$layoutPosition ${repo.fullName}"
 
             // if the description is missing, hide the TextView
             var descriptionVisibility = View.GONE

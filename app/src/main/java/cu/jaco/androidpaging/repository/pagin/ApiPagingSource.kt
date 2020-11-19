@@ -15,7 +15,7 @@ class ApiPagingSource @Inject constructor(
 ) : PagingSource<Int, Repo>() {
 
     companion object {
-        private const val TAG = "ApiPagingSourFce"
+        private const val TAG = "ApiPagingSource"
     }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Repo> {

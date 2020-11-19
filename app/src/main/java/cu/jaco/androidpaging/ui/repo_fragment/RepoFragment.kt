@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
+import androidx.paging.PagingData
+import androidx.paging.map
 import androidx.recyclerview.widget.RecyclerView
 import cu.jaco.androidpaging.R
 import cu.jaco.androidpaging.ui.base.BaseFragment
@@ -42,32 +44,30 @@ class RepoFragment : BaseFragment() {
         val retry = view.findViewById<Button>(R.id.retry_button)
 
         val repoAdapter = RepoPageAdapter()
-        repoAdapter.addLoadStateListener { loadState ->
-            // Only show the list if refresh succeeds.
-            rv.isVisible = loadState.source.refresh is LoadState.NotLoading
-            // Show loading spinner during initial load or refresh.
-            progress.isVisible = loadState.source.refresh is LoadState.Loading
-            // Show the retry state if initial load or refresh fails.
-            retry.isVisible = loadState.source.refresh is LoadState.Error
+//        repoAdapter.addLoadStateListener { loadState ->
+//            // Only show the list if refresh succeeds.
+//            rv.isVisible = loadState.source.refresh is LoadState.NotLoading
+//            // Show loading spinner during initial load or refresh.
+//            progress.isVisible = loadState.source.refresh is LoadState.Loading
+//            // Show the retry state if initial load or refresh fails.
+//            retry.isVisible = loadState.source.refresh is LoadState.Error
+//
+//            // Toast on any error, regardless of whether it came from RemoteMediator or PagingSource
+//            val errorState = loadState.source.append as? LoadState.Error
+//                ?: loadState.source.prepend as? LoadState.Error
+//                ?: loadState.append as? LoadState.Error
+//                ?: loadState.prepend as? LoadState.Error
+//
+//            errorState?.let {
+//                Toast.makeText(
+//                    requireContext(),
+//                    resources.getString(R.string.error, it.error),
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            }
+//        }
 
-            // Toast on any error, regardless of whether it came from RemoteMediator or PagingSource
-            val errorState = loadState.source.append as? LoadState.Error
-                ?: loadState.source.prepend as? LoadState.Error
-                ?: loadState.append as? LoadState.Error
-                ?: loadState.prepend as? LoadState.Error
-
-            errorState?.let {
-                Toast.makeText(
-                    requireContext(),
-                    resources.getString(R.string.error, it.error),
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        }
-
-        rv.setHasFixedSize(true)
-        rv.adapter = repoAdapter.withLoadStateHeaderAndFooter(
-            header = ReposLoadStateAdapter { repoAdapter.retry() },
+        rv.adapter = repoAdapter.withLoadStateFooter(
             footer = ReposLoadStateAdapter { repoAdapter.retry() }
         )
 
